@@ -1,0 +1,35 @@
+running egg_info
+creating build/RSS_Gemini/RSS_Gemini.egg-info
+writing build/RSS_Gemini/RSS_Gemini.egg-info/PKG-INFO
+writing dependency_links to build/RSS_Gemini/RSS_Gemini.egg-info/dependency_links.txt
+writing entry points to build/RSS_Gemini/RSS_Gemini.egg-info/entry_points.txt
+writing requirements to build/RSS_Gemini/RSS_Gemini.egg-info/requires.txt
+writing top-level names to build/RSS_Gemini/RSS_Gemini.egg-info/top_level.txt
+writing manifest file 'build/RSS_Gemini/RSS_Gemini.egg-info/SOURCES.txt'
+reading manifest file 'build/RSS_Gemini/RSS_Gemini.egg-info/SOURCES.txt'
+writing manifest file 'build/RSS_Gemini/RSS_Gemini.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build
+creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib
+creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini
+copying RSS_Gemini/gemini_node.py -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini
+copying RSS_Gemini/__init__.py -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini
+running install
+running install_lib
+creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini
+copying /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini/gemini_node.py -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini
+copying /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini/__init__.py -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini
+byte-compiling /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini/gemini_node.py to gemini_node.cpython-38.pyc
+byte-compiling /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/ament_index
+creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/ament_index/resource_index
+creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/ament_index/resource_index/packages
+copying resource/RSS_Gemini -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/ament_index/resource_index/packages
+copying package.xml -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/RSS_Gemini
+running install_egg_info
+Copying build/RSS_Gemini/RSS_Gemini.egg-info to /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini-0.0.0-py3.8.egg-info
+running install_scripts
+Installing gemini_node script to /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/RSS_Gemini
+writing list of installed files to '/home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/install.log'

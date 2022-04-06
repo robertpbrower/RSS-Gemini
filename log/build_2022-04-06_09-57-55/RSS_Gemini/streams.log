@@ -1,0 +1,37 @@
+[0.553s] Invoking command in '/home/ashdawngary/colcon_ws/src/RSS_Gemini': PYTHONPATH=/home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/RSS_Gemini build --build-base /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build install --prefix /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini --record /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/install.log --single-version-externally-managed
+[0.736s] running egg_info
+[0.736s] creating build/RSS_Gemini/RSS_Gemini.egg-info
+[0.737s] writing build/RSS_Gemini/RSS_Gemini.egg-info/PKG-INFO
+[0.737s] writing dependency_links to build/RSS_Gemini/RSS_Gemini.egg-info/dependency_links.txt
+[0.737s] writing entry points to build/RSS_Gemini/RSS_Gemini.egg-info/entry_points.txt
+[0.737s] writing requirements to build/RSS_Gemini/RSS_Gemini.egg-info/requires.txt
+[0.737s] writing top-level names to build/RSS_Gemini/RSS_Gemini.egg-info/top_level.txt
+[0.739s] writing manifest file 'build/RSS_Gemini/RSS_Gemini.egg-info/SOURCES.txt'
+[0.767s] reading manifest file 'build/RSS_Gemini/RSS_Gemini.egg-info/SOURCES.txt'
+[0.768s] writing manifest file 'build/RSS_Gemini/RSS_Gemini.egg-info/SOURCES.txt'
+[0.769s] running build
+[0.769s] running build_py
+[0.769s] creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build
+[0.769s] creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib
+[0.770s] creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini
+[0.770s] copying RSS_Gemini/gemini_node.py -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini
+[0.770s] copying RSS_Gemini/__init__.py -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini
+[0.770s] running install
+[0.770s] running install_lib
+[0.771s] creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini
+[0.771s] copying /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini/gemini_node.py -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini
+[0.771s] copying /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build/lib/RSS_Gemini/__init__.py -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini
+[0.772s] byte-compiling /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini/gemini_node.py to gemini_node.cpython-38.pyc
+[0.772s] byte-compiling /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini/__init__.py to __init__.cpython-38.pyc
+[0.773s] running install_data
+[0.773s] creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/ament_index
+[0.773s] creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/ament_index/resource_index
+[0.773s] creating /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/ament_index/resource_index/packages
+[0.773s] copying resource/RSS_Gemini -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/ament_index/resource_index/packages
+[0.773s] copying package.xml -> /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/share/RSS_Gemini
+[0.774s] running install_egg_info
+[0.775s] Copying build/RSS_Gemini/RSS_Gemini.egg-info to /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages/RSS_Gemini-0.0.0-py3.8.egg-info
+[0.776s] running install_scripts
+[0.791s] Installing gemini_node script to /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/RSS_Gemini
+[0.791s] writing list of installed files to '/home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/install.log'
+[0.807s] Invoked command in '/home/ashdawngary/colcon_ws/src/RSS_Gemini' returned '0': PYTHONPATH=/home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/RSS_Gemini build --build-base /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/build install --prefix /home/ashdawngary/colcon_ws/src/RSS_Gemini/install/RSS_Gemini --record /home/ashdawngary/colcon_ws/src/RSS_Gemini/build/RSS_Gemini/install.log --single-version-externally-managed

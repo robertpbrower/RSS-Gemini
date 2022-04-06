@@ -1,0 +1,3 @@
+[console_scripts]
+gemini_node = RSS_Gemini.gemini_node:main
+
