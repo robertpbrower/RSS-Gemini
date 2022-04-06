@@ -14,7 +14,7 @@ https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/#pc-setup
 export ROS_DOMAIN_ID=30 #TURTLEBOT3
 export TURTLEBOT3_MODEL=burger
 
-alias resource='source ~/colcon_ws/install/setup.bash'
+alias resource='source ~/colcon_ws/src/install/setup.bash'
 alias rungemini='ros2 run RSS_Gemini gemini_node'
 
 ```
@@ -27,13 +27,20 @@ export SVGA_VGPU10=0
 
 ### Commands to run
 ```bash
-cd ~/colcon_ws/src
-
-colcon build && resource
-rungemini
+cb && resource && rungemini
 ```
 
 Launch house environment
 ```bash
 ros2 launch turtlebot3_gazebo turtlebot3_house.launch.py
+```
+
+Launch teleop
+```bash
+ros2 run turtlebot3_teleop teleop_keyboard
+```
+
+Launch cartographer
+```bash
+ros2 launch turtlebot3_cartographer cartographer.launch.py
 ```

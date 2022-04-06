@@ -89,6 +89,7 @@ class Turtlebot3PositionControl(Node):
             self.get_key_state = True
 
         else:
+            print(self.step,self.last_pose_x,self.last_pose_y,self.goal_pose_x,self.goal_pose_y)
             # Step 1: Turn
             if self.step == 1:
                 path_theta = math.atan2(
