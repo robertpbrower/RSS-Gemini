@@ -22,6 +22,7 @@ alias rungemini='ros2 run RSS_Gemini gemini_node' # dont use this, no node yet
 
 (For vmware gazebo cores out)
 ```bash
+export SVGA_VGPU10=0
 export QT_X11_NO_MITSHM=1
 ```
 
@@ -51,8 +52,12 @@ Launch teleop (ith robot)
 ROS_NAMESPACE=tb3_i roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
 
-Launch slam_gmapping (base robot)
+Install slam_gmapping
+```bash
+sudo apt-get install ros-kinetic-slam-gmapping
 ```
+Launch slam_gmapping (base robot)
+```bash
 roslaunch turtlebot3_slam turtlebot3_gmapping.launch set_base_frame:=base_footprint set_odom_frame:=odom set_map_frame:=map
 ```
 
@@ -60,7 +65,12 @@ Launch slam_gmapping (for each turtlebot)
 ```bash
 ROS_NAMESPACE=tb3_0 roslaunch turtlebot3_slam turtlebot3_gmapping.launch set_base_frame:=tb3_0/base_footprint set_odom_frame:=tb3_0/odom set_map_frame:=tb3_0/map
 ROS_NAMESPACE=tb3_1 roslaunch turtlebot3_slam turtlebot3_gmapping.launch set_base_frame:=tb3_1/base_footprint set_odom_frame:=tb3_1/odom set_map_frame:=tb3_1/map
-ROS_NAMESPACE=tb3_1 roslaunch turtlebot3_slam turtlebot3_gmapping.launch set_base_frame:=tb3_2/base_footprint set_odom_frame:=tb3_2/odom set_map_frame:=tb3_2/map
+ROS_NAMESPACE=tb3_2 roslaunch turtlebot3_slam turtlebot3_gmapping.launch set_base_frame:=tb3_2/base_footprint set_odom_frame:=tb3_2/odom set_map_frame:=tb3_2/map
+```
+
+Install `multi_map_merge`
+```bash
+sudo apt-get install ros-kinetic-multirobot-map-merge
 ```
 
 Launch multi_map_merge
@@ -70,5 +80,10 @@ roslaunch turtlebot3_gazebo multi_map_merge.launch
 
 Launch rviz
 ```bash
-rosrun rviz rviz -d rospack find turtlebot3 gazebo /rviz/multi turtlebot3_slam.rviz
+rosrun rviz rviz -d rospack find turtlebot3_gazebo /rviz/multi_turtlebot3_slam.rviz
 ```
+alt
+```bash
+rviz
+```
+then `File >> Open` and navigate to `/home/ashdawngary/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/rviz` and open `multi_turtlebot3_slam.rviz`
