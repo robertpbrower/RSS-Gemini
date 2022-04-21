@@ -86,4 +86,12 @@ alt
 ```bash
 rviz
 ```
-then `File >> Open` and navigate to `/home/ashdawngary/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/rviz` and open `multi_turtlebot3_slam.rviz`
+then `File >> Open` and navigate to `~/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/rviz` and open `multi_turtlebot3_slam.rviz`
+
+Make sure to move `model.sdf` into `~/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models/turtlebot3_house/model.sdf`
+
+Launch potential fields for robot `i`
+
+```bash
+ROS_NAMESPACE=tb3_i rosrun RSS_Gemini pf.py
+```
