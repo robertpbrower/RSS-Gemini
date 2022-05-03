@@ -1,0 +1,25 @@
+<launch>
+  <group ns="tb3_0">
+    <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
+      <arg name="multi_robot_name" value="tb3_0"/>
+    </include>
+    <include file="$(find turtlebot3_slam)/launch/turtlebot3_gmapping.launch">
+      <arg name="set_base_frame" value="tb3_0/base_footprint"/>
+      <arg name="set_odom_frame" value="tb3_0/odom"/>
+      <arg name="set_map_frame" value="tb3_0/map"/>
+    </include>
+    <node name="tb3_0_teleop" pkg="turtlebot3_teleop" type="turtlebot3_teleop_key"/>
+  </group>
+  <group ns="tb3_1">
+    <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
+      <arg name="multi_robot_name" value="tb3_1"/>
+    </include>
+    <include file="$(find turtlebot3_slam)/launch/turtlebot3_gmapping.launch">
+      <arg name="set_base_frame" value="tb3_1/base_footprint"/>
+      <arg name="set_odom_frame" value="tb3_1/odom"/>
+      <arg name="set_map_frame" value="tb3_1/map"/>
+    </include>
+    <node name="tb3_1_teleop" pkg="turtlebot3_teleop" type="turtlebot3_teleop_key"/>
+  </group>
+  <include file="$(find turtlebot3_gazebo)/launch/multi_map_merge.launch"/>
+</launch>
