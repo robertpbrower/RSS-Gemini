@@ -8,6 +8,7 @@
       <arg name="set_odom_frame" value="tb3_0/odom"/>
       <arg name="set_map_frame" value="tb3_0/map"/>
     </include>
+    <node name="tb3_0_pf" pkg="RSS_Gemini" type="pf.py"/>
     <node name="tb3_0_teleop" pkg="turtlebot3_teleop" type="turtlebot3_teleop_key" output="screen" launch-prefix="gnome-terminal --command"/>
   </group>
   <group ns="tb3_1">

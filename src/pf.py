@@ -6,7 +6,7 @@ from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
 
 LINEAR_VEL = 0.22
-STOP_DISTANCE = 0.2
+STOP_DISTANCE = 0.3
 LIDAR_ERROR = 0.05
 SAFE_STOP_DISTANCE = STOP_DISTANCE + LIDAR_ERROR
 
@@ -19,31 +19,31 @@ class Obstacle():
         scan = rospy.wait_for_message('scan', LaserScan)
         scan_filter = []
         ang_min = scan.angle_min
-	ang_max = scan.angle_max
-	ang_incr = scan.angle_increment
-	
-	range_min = scan.range_min
-	range_max = scan.range_max
+        ang_max = scan.angle_max
+        ang_incr = scan.angle_increment
+		
+        range_min = scan.range_min
+        range_max = scan.range_max
 
         samples = len(scan.ranges)  # The number of samples is defined in 
                                     # turtlebot3_<model>.gazebo.xacro file,
                                     # the default is 360.
 
-	cvec = [0,0]
+        cvec = [0,0]
 
-	for i in range(0, samples):
-	    sample_ang = ang_min + i * ang_incr
-	    if range_min <= scan.ranges[i] <= range_max:
-		cvec[0] += -math.cos(sample_ang) * pow(scan.ranges[i],-2)
-		cvec[1] += -math.sin(sample_ang) * pow(scan.ranges[i],-2)
-	
-	cvec[0] /= samples
-	cvec[1] /= samples
-	
-	
-	mag = math.hypot(cvec[0], cvec[1])
-	ang = math.atan2(cvec[1], cvec[0])
-       
+        for i in range(0, samples):
+            sample_ang = ang_min + i * ang_incr
+            if range_min <= scan.ranges[i] <= range_max:
+                cvec[0] += -math.cos(sample_ang) * pow(scan.ranges[i],-2)
+                cvec[1] += -math.sin(sample_ang) * pow(scan.ranges[i],-2)
+
+        cvec[0] /= samples
+        cvec[1] /= samples
+
+
+        mag = math.hypot(cvec[0], cvec[1])
+        ang = math.atan2(cvec[1], cvec[0])
+
         return (mag,ang)
 
     def obstacle(self):
@@ -53,23 +53,23 @@ class Obstacle():
         while not rospy.is_shutdown():
             (mag,ang) = self.get_scan() 
             print('pf res: ',mag,ang)
-            if mag < 0.5:
-		twist.linear.x = 0.2
-		twist.angular.z = 0
-	    elif mag < 3 or abs(ang) < 0.5:
-		twist.linear.x = 0.15
-		twist.angular.z = ang / 7.5
-	    elif mag < 5 or abs(ang) < 1.5:
-		twist.linear.x = 0.05
-		twist.angular.z = ang / 5.0
-	    else:
-		twist.linear.x = 0
-		if ang < 0:
-		    twist.angular.z = -0.2
-		else:
-		    twist.angular.z = 0.2
-	    print(twist.linear.x,twist.angular.z)
-	    self._cmd_pub.publish(twist)
+            if mag < 0.4:
+                twist.linear.x = 0.15
+                twist.angular.z = 0
+            elif mag < 3 or abs(ang) < 0.5:
+                twist.linear.x = 0.10
+                twist.angular.z = ang / 7.5
+            elif mag < 4 or abs(ang) < 1.5:
+                twist.linear.x = 0.05
+                twist.angular.z = ang / 5.0
+            else:
+                twist.linear.x = 0
+                if ang < 0:
+                    twist.angular.z = -0.2
+                else:
+                    twist.angular.z = 0.2
+            print(twist.linear.x,twist.angular.z)
+            self._cmd_pub.publish(twist)
 	    
 
 def main():
